@@ -70,10 +70,6 @@ To test the project, follow these steps:
 <hr>
 <img width="1412" height="912" alt="Screenshot 2025-09-10 223517" src="https://github.com/user-attachments/assets/03066f14-84f0-4976-b3f9-e5889cdcb84a" />
 
-
-## 📦 API Reference
-The API reference is available at [API Documentation](https://example.com/api/docs).
-
 ## 👤 Author
 The Blog Management System was created by [Jaber Hussain](https://www.linkedin.com/in/jaber-hussain/).
 
