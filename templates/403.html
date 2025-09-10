@@ -1,0 +1,26 @@
+{% extends './base/base.html' %}
+
+{% block title %}403 Forbidden{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="text-center">
+        <!-- Big Error Code -->
+        <h1 class="display-1 fw-bold text-dark">403</h1>
+
+        <!-- Error Title -->
+        <h2 class="text-dark mb-3">Access Denied</h2>
+
+        <!-- Dynamic Error Message -->
+        <p class="lead text-muted">
+            {{ message|default:"You don’t have permission to access this page." }}
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="mt-4">
+            <a href="{% url 'dashboard' %}" class="btn btn-primary px-4 me-2">Go to Dashboard</a>
+            <a href="javascript:history.back()" class="btn btn-outline-secondary px-4">Go Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

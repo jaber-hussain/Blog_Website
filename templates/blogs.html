@@ -23,6 +23,31 @@
                 <section class="mb-5">
                     <p class="fs-5 mb-4">{{single_post.short_description}}</p>
                     <p class="fs-5 mb-4">{{single_post.blog_body}}</p>
+                    <!-- Comments Section -->
+                     <h2 class="fw-bolder mb-4">Comments ({{ comment_count }})</h2>
+                    {% if comments %}
+                    <section class="mb-5">
+                        {% for comment in comments %}
+                        <div class="card-body">
+                            <h5>{{ comment.user.username }} <small class="text-muted">on {{ comment.created_at }}</small></h5>
+                            <p class="card-text">{{ comment.comment }}</p>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No comments yet.</p>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <div class="form-group">
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                <label for="comment">Add a comment:</label>
+                                <textarea class="form-control" id="comment" placeholder="Enter your comment here..." name="comment" rows="3" required></textarea>
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                            </form>
+                        </div>
+                    {% else %}
+                        <p><a href="{% url 'login' %}">Log in</a> to post a comment.</p>
+                    {% endif %}
                     </section>
             </article>
         </div>
@@ -49,8 +74,8 @@
             <div class="card mb-4 p-3">
                 <h4 class="font-italic">Follow Us</h4>
                 <ol class="list-unstyled">
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="https://github.com/jaber-hussain">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/jaber-hussain/">LinkedIn</a></li>
                 </ol>
             </div>
         </div>

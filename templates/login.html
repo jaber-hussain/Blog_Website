@@ -7,7 +7,7 @@
 <form action="{% url 'login' %}" method="POST" style="width: 500px; margin: auto;">
 {% csrf_token %}
 {{ form | crispy}}
-<input type="submit" value="Login" class="btn btn-warning">
+<input type="submit" value="Login" class="btn btn-primary">
 </form>
 
 {% endblock %}

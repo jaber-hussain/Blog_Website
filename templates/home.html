@@ -9,14 +9,14 @@
     <div class="col-md-8 px-0">
       <h1 class="display-4 font-italic"><a href="{% url 'blogs' post.slug %}"> {{post.title}}</a></h1>
       <p class="lead my-3">{{post.short_description | truncatewords:50}}</p>
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+      <p class="lead mb-0"><a href="{% url 'blogs' post.slug %}" class="text-white font-weight-bold">Continue reading...</a></p>
     </div>
 </div>
   {% endif %}
 {% endfor %}
 
 <!-- Featured POST-->
-<h3 class="text-uppercase text-warning" style="letter-spacing: 2px;">Featured Post</h3>
+<h3 class="text-uppercase text-primary" style="letter-spacing: 2px;">Featured Post</h3>
 <div class="row mb-2">
   {% for post in featured_post %}
     {% if not forloop.first %}
@@ -24,7 +24,7 @@
         <div class="card border-0">
           <!-- Image above text -->
           {% if post.blogs_image %}
-            <img src="{{ post.blogs_image.url }}" class="card-img-top" alt="{{ post.title }}">
+            <img src="{{ post.blogs_image.url }}" class="card-img-top featured-img" alt="{{ post.title }}">
           {% endif %}
 
           <div class="card-body">
@@ -41,7 +41,7 @@
 </div>
 
 <!--Recent Article-->
-<h3 class="text-uppercase text-warning" style="letter-spacing: 2px;">Recent Article</h3>
+<h3 class="text-uppercase text-primary" style="letter-spacing: 2px;">Recent Article</h3>
   <main role="main" class="container p-0">
     <div class="row">
       <div class="col-md-8 blog-main">
@@ -62,14 +62,14 @@
       <aside class="col-md-4 blog-sidebar">
         <div class="p-3 mb-3 bg-light rounded">
           <h4 class="font-italic">About</h4>
-          <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          <p class="mb-0"><em>Backend Developer</em> skilled in Python and Django, focused on building web applications, APIs, and database-driven systems.</p>
         </div>
 
         <div class="p-3">
           <h4 class="font-italic">Follow Us</h4>
           <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://github.com/jaber-hussain">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jaber-hussain/">LinkedIn</a></li>
           </ol>
         </div>
       </aside><!-- /.blog-sidebar -->

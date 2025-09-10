@@ -1,14 +1,11 @@
 from django.shortcuts import redirect, render, HttpResponse
-from blogs.models import Blogs, Category
+from blogs.models import Blogs, Category, Comment
 from django.db.models import Q
 
 # Create your views here.
 def posts_by_category(request, category_id):
     posts = Blogs.objects.filter(status='published', category__id=category_id)
-    try:
-        category = Category.objects.get(pk=category_id)
-    except:
-        return render(request, '404.html', status=404)
+    category = Category.objects.get(pk=category_id)
     context = {
         'posts' : posts,
         'category': category
@@ -17,13 +14,25 @@ def posts_by_category(request, category_id):
 
 #Blogs
 def blogs(request, slug):
-    try:
-        blog_post = Blogs.objects.get(status='published', slug=slug)
-    except Blogs.DoesNotExist:
-        return render(request, '404.html', status=404)
-
+   
+    blog_post = Blogs.objects.get(status='published', slug=slug)
+    
+        
+    #Comments
+    if request.method == 'POST':
+        comment = Comment()
+        comment.user = request.user
+        comment.blog = blog_post
+        comment.comment = request.POST['comment']
+        comment.save()
+        return redirect(f'/blogs/{slug}/#comments')
+    
+    comments = Comment.objects.filter(blog=blog_post)
+    comment_count = comments.count()
     context = {
-        'single_post': blog_post
+        'single_post': blog_post,
+        'comments': comments,
+        'comment_count': comment_count
     }
     return render(request, 'blogs.html', context)
 

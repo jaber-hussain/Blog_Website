@@ -1,69 +1,139 @@
-/* stylelint-disable selector-list-comma-newline-after */
-
-.blog-header {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  font-size: 2.25rem;
-}
-
-.blog-header-logo:hover {
-  text-decoration: none;
+/* ---------- Global Typography ---------- */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  color: #111;
 }
 
-.display-4 {
-  font-size: 2.5rem;
+/* ---------- Header ---------- */
+.blog-header {
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
 }
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
+.blog-header-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
 }
-
-.flex-auto {
-  flex: 0 0 auto;
-}
-
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+.blog-header-logo i {
+  color: #007bff;
+  margin-right: 8px;
 }
 
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
+/* ---------- Buttons ---------- */
+.btn-primary-custom-3 {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-primary-custom-3:hover {
+  background-color: #0056b3;
+  border-color: #004a99;
 }
 
-/*
- * Blog posts
- */
-.blog-post {
-  margin-bottom: 4rem;
+/* ---------- Navigation ---------- */
+.nav-scroller .nav-link {
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s ease;
 }
+.nav-scroller .nav-link:hover,
+.nav-scroller .nav-link.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* ---------- Blog Posts ---------- */
 .blog-post-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .blog-post-meta {
-  margin-bottom: 1.25rem;
   color: #727272;
+  font-size: 0.9rem;
 }
 
-/*
- * Footer
- */
+/* ---------- Featured Images ---------- */
+.featured-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
 .blog-footer {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   color: #727272;
   text-align: center;
   background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
-.blog-footer p:last-child {
-  margin-bottom: 0;
+
+/* ---------- Featured Post Jumbotron (Smaller & Clean) ---------- */
+.jumbotron.p-3.p-md-5.text-white.rounded.bg-dark {
+  position: relative;
+  background-color: #212529;       /* Dark fallback color */
+  color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;              /* Reduced padding for smaller height */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); /* Subtle text shadow for clarity */
+  max-height: 350px;               /* Limit overall height */
+  overflow: hidden;                /* Crop excess image area */
+}
+
+/* ---------- Featured Post Title ---------- */
+.jumbotron .display-4.font-italic a {
+  font-family: 'Merriweather', Georgia, serif; /* Simpler font */
+  font-weight: 500;               /* Medium weight for readability */
+  font-size: 2rem;                /* Smaller, cleaner size */
+  color: #f1f1f1;                 /* Light grey text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.jumbotron .display-4.font-italic a:hover {
+  color: #007bff;                 
+}
+
+/* ---------- Description Text ---------- */
+.jumbotron .lead {
+  color: #e2e2e2;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1rem;                /* Slightly smaller for a neat look */
+  margin-top: 0.5rem;
+}
+
+/* ---------- Continue Reading Link ---------- */
+.jumbotron .lead.mb-0 a {
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.jumbotron .lead.mb-0 a:hover {
+  color: #007bff;
+}
+
+@media (min-width: 768px) {
+  .jumbotron.p-3.p-md-5.text-white.rounded.bg-dark {
+    padding: 3rem 2rem;           /* Slightly larger padding on medium+ screens */
+    max-height: 400px;            /* Maintain a modest hero size */
+  }
+
+  .jumbotron .display-4.font-italic a {
+    font-size: 2.3rem;            /* Slightly larger title on medium+ screens */
+  }
 }
