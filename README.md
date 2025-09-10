@@ -62,15 +62,20 @@ To test the project, follow these steps:
 4. **UI Tests**: Run the UI tests using a tool such as Selenium or Cypress.
 
 ## 📸 Screenshots
-[Placeholder for screenshot 1]
-[Placeholder for screenshot 2]
-[Placeholder for screenshot 3]
+<img width="1920" height="2533" alt="screencapture-127-0-0-1-8000-2025-09-10-22_02_11" src="https://github.com/user-attachments/assets/dfdc4427-41ac-45e9-b1c4-8413b4493cea" />
+<hr>
+<img width="1387" height="605" alt="screencapture-127-0-0-1-8000-dashboard-2025-09-10-22_02_50" src="https://github.com/user-attachments/assets/92b2ef38-57b5-4bb8-924a-725eb831027b" />
+<hr>
+<img width="1397" height="857" alt="Screenshot 2025-09-10 223446" src="https://github.com/user-attachments/assets/0f69817e-ce2e-42a3-8cb6-e0ccd7a80285" />
+<hr>
+<img width="1412" height="912" alt="Screenshot 2025-09-10 223517" src="https://github.com/user-attachments/assets/03066f14-84f0-4976-b3f9-e5889cdcb84a" />
+
 
 ## 📦 API Reference
 The API reference is available at [API Documentation](https://example.com/api/docs).
 
 ## 👤 Author
-The Blog Management System was created by [Your Name](https://example.com).
+The Blog Management System was created by [Jaber Hussain](https://www.linkedin.com/in/jaber-hussain/).
 
 ## 📝 License
 The Blog Management System is licensed under the [MIT License](https://opensource.org/licenses/MIT).
