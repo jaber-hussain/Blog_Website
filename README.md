@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Django](https://img.shields.io/badge/Django-4.x-092E20?style=flat-square&logo=django&logoColor=white)](https://djangoproject.com)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
 > A clean, functional blog platform with a public-facing site and a full admin dashboard for managing posts, categories, users, and comments.
 
