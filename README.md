@@ -1,77 +1,119 @@
-# 🚀 Project Title & Tagline
-**Blog Management System** 
-> A comprehensive blogging platform for users to create, manage, and share their content.
+<div align="center">
 
-## 📖 Description
-The Blog Management System is a web-based application designed to provide a seamless experience for bloggers and content creators. This platform allows users to register, create, edit, and delete their blog posts, as well as manage categories and user profiles. The system is built using Django, a high-level Python web framework, and utilizes a robust database to store user data and blog content.
+# Django Blog Platform ✍️
 
-The Blog Management System is designed with a user-friendly interface, making it easy for bloggers to focus on creating high-quality content without worrying about the technical aspects of managing a website. The system also includes features such as user authentication, authorization, and permission management, ensuring that only authorized users can access and modify sensitive data.
+**A Full-Featured Blog Web App - Built with Django**
 
-One of the key features of the Blog Management System is its flexibility and scalability. The system can be easily extended to accommodate additional features and functionalities, making it an ideal solution for bloggers and content creators who want to grow their online presence. Whether you're a hobbyist blogger or a professional content creator, the Blog Management System provides a robust and reliable platform to showcase your work and connect with your audience.
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Django](https://img.shields.io/badge/Django-4.x-092E20?style=flat-square&logo=django&logoColor=white)](https://djangoproject.com)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)]()
 
-## 📖 Description Continued
-In addition to its core features, the Blog Management System also includes a range of tools and functionalities to help bloggers optimize their content and reach a wider audience. These include SEO optimization, social media integration, and analytics tools, which provide valuable insights into user engagement and content performance.
+> A clean, functional blog platform with a public-facing site and a full admin dashboard for managing posts, categories, users, and comments.
 
-The system is also designed with security in mind, featuring robust security measures to protect user data and prevent unauthorized access. With its comprehensive feature set, user-friendly interface, and robust security measures, the Blog Management System is an ideal solution for anyone looking to create and manage a professional-grade blog or content platform.
+</div>
+
+---
+
+## 📌 What is this?
+
+A Django-based blog platform with two distinct layers - a **public blog site** for readers and a **dashboard** for authors and admins to manage content. Built with server-side rendering using Django templates.
+
+---
 
 ## ✨ Features
-* **User Registration and Authentication**: Users can register and log in to the system, with authentication and authorization mechanisms in place to ensure secure access.
-* **Blog Post Management**: Users can create, edit, and delete blog posts, with options for adding categories, tags, and images.
-* **Category Management**: Users can create, edit, and delete categories, with options for assigning categories to blog posts.
-* **User Profile Management**: Users can view and edit their profile information, including username, email, and password.
-* **Permission Management**: System administrators can assign permissions to users, controlling access to sensitive data and features.
-* **SEO Optimization**: The system includes built-in SEO optimization tools, helping bloggers improve their search engine rankings and increase visibility.
-* **Social Media Integration**: The system allows users to share their blog posts on social media platforms, increasing reach and engagement.
-* **Analytics Tools**: The system provides analytics tools, giving bloggers valuable insights into user engagement and content performance.
 
-## 🧰 Tech Stack Table
-| **Component** | **Technology** |
-| --- | --- |
-| Frontend | HTML, CSS, JavaScript, Django Templates |
-| Backend | Django, Python |
-| Database | Relational Database (e.g. MySQL, PostgreSQL) |
-| Authentication | Django Authentication Framework |
-| Authorization | Django Permission Framework |
-| SEO Optimization | Django SEO Framework |
-| Social Media Integration | Django Social Media Framework |
-| Analytics Tools | Django Analytics Framework |
+### 🌐 Public Site
+- Home page with latest blog posts
+- Browse posts by category
+- Full blog post detail page with comments
+- Search functionality across posts
+- Custom 403, 404, and 500 error pages
 
-## 📁 Project Structure
-The project is structured into the following folders and files:
-* `blog_main/`: The main project folder, containing the `asgi.py`, `settings.py`, `urls.py`, and `wsgi.py` files.
-* `blogs/`: The app folder, containing the `models.py`, `views.py`, `forms.py`, and `templates/` folders.
-* `templates/`: The templates folder, containing the `base.html`, `dashboard.html`, `leftsidebar.html`, `posts.html`, `edit_posts.html`, `users.html`, `categories.html`, and `edit_users.html` files.
-* `static/`: The static files folder, containing CSS, JavaScript, and image files.
-* `media/`: The media files folder, containing uploaded images and other media files.
+### 🖥️ Admin Dashboard
+- Post management - add, edit, delete posts
+- Category management - add, edit, delete categories
+- User management - add, edit, manage users
+- Comment management
+- Rich text post creation with image upload support
+- Post status control (draft / published)
+- Left sidebar navigation
 
-## ⚙️ How to Run
-To run the project, follow these steps:
-1. **Setup**: Clone the repository and navigate to the project folder.
-2. **Environment**: Create a virtual environment using `python -m venv venv` and activate it using `source venv/bin/activate`.
-3. **Install Dependencies**: Install the required dependencies using `pip install -r requirements.txt`.
-4. **Database**: Create a database and update the `settings.py` file with the database credentials.
-5. **Migrate**: Run the database migrations using `python manage.py migrate`.
-6. **Run**: Run the development server using `python manage.py runserver`.
-7. **Deploy**: Deploy the project to a production environment using a WSGI server such as Gunicorn or uWSGI.
+### 🔐 Auth
+- User registration and login
+- Role-based access with decorators
 
-## 🧪 Testing Instructions
-To test the project, follow these steps:
-1. **Unit Tests**: Run the unit tests using `python manage.py test`.
-2. **Integration Tests**: Run the integration tests using `python manage.py test --tag=integration`.
-3. **Functional Tests**: Run the functional tests using `python manage.py test --tag=functional`.
-4. **UI Tests**: Run the UI tests using a tool such as Selenium or Cypress.
+---
 
-## 📸 Screenshots
-<img width="1920" height="2533" alt="screencapture-127-0-0-1-8000-2025-09-10-22_02_11" src="https://github.com/user-attachments/assets/dfdc4427-41ac-45e9-b1c4-8413b4493cea" />
-<hr>
-<img width="1387" height="605" alt="screencapture-127-0-0-1-8000-dashboard-2025-09-10-22_02_50" src="https://github.com/user-attachments/assets/92b2ef38-57b5-4bb8-924a-725eb831027b" />
-<hr>
-<img width="1397" height="857" alt="Screenshot 2025-09-10 223446" src="https://github.com/user-attachments/assets/0f69817e-ce2e-42a3-8cb6-e0ccd7a80285" />
-<hr>
-<img width="1412" height="912" alt="Screenshot 2025-09-10 223517" src="https://github.com/user-attachments/assets/03066f14-84f0-4976-b3f9-e5889cdcb84a" />
+## 🏗️ Project Structure
 
-## 👤 Author
-The Blog Management System was created by [Jaber Hussain](https://www.linkedin.com/in/jaber-hussain/).
+```
+├── blogs/             # Core blog app - posts, categories, comments,
+│                      # context processors, views
+├── dashboard/         # Admin dashboard - post, category, user management
+│                      # forms, views, templates
+├── blog_main/         # Project config - settings, urls, forms, views
+└── templates/
+    ├── base/          # Base layout, header, footer
+    ├── dashboard/     # Dashboard pages (posts, categories, users)
+    ├── blogs.html     # Blog listing page
+    ├── home.html      # Home page
+    ├── search.html    # Search results
+    ├── login.html     # Login page
+    ├── register.html  # Registration page
+    └── 403/404/500    # Custom error pages
+```
 
-## 📝 License
-The Blog Management System is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+---
+
+## 🔌 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Django 4.x |
+| Database | SQLite (dev) / PostgreSQL (prod) |
+| Frontend | Django Templates + Custom CSS |
+| Media | Image uploads with date-based folder structure |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/jaber-hussain/django-blog.git
+cd django-blog
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirement.txt
+
+# Run migrations
+python manage.py migrate
+
+# Create superuser
+python manage.py createsuperuser
+
+# Start server
+python manage.py runserver
+```
+
+---
+
+## 👨‍💻 Author
+
+**Jaber Hussain**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jaber-hussain/)
+[![Fiverr](https://img.shields.io/badge/Fiverr-1DBF73?style=flat-square&logo=fiverr&logoColor=white)](https://www.fiverr.com/jaberhussain503)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:jaberchaudary@gmail.com)
+
+---
+
+<div align="center">
+
+*Built with ❤️ using Django*
+
+</div>
